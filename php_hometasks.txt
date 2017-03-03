@@ -40,9 +40,9 @@ git:
 Что задано домой?
 
 php basics (повторить):
-if
-else
-elseif/else if
+if - DONE
+else - DONE
+elseif/else if - DONE
 for
 foreach
 switch
