@@ -1,0 +1,39 @@
+Домашнее задание от 20.02.2017, Преподаватель: Ивченко Дмитрий Frontend
+
+Что прошли на занятии?
+
+html теги
+ body head title p div a img
+
+
+Что задано домой?
+https://drive.google.com/open?id=1WT3bhEvm_eMuZtcvdsHTSXjtmnaFI6BHYEDXnuyaGzY
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+Домашнее задание от 27.02.2017,Преподаватель: Ивченко Дмитрий Frontend
+
+Что прошли на занятии?
+
+position: relative;
+position: abololute;
+flex-box
+float
+
+
+Что задано домой?
+
+1 https://drive.google.com/drive/folders/0B4LkYBeRUrdaeTFmM3Qzcll1ZVk?usp=sharing
+Сделать  первое при помощи position: relative - absolute
+Второе сделать при помощи flex
+читать тут:
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+http://frontender.info/a-guide-to-flexbox/
+медиа запросы для адаптивности http://htmlbook.ru/css/value/media
+это поместить в header <meta name="viewport" content="width=device-width">
+
+3 Дополнительно: Начинаем верстать сайт header и footer
+https://drive.google.com/file/d/0B4LkYBeRUrdaMEttS1ZZQWFhMWs/view?usp=sharing
+-------------------------------------------------------------------------------------------------------------
