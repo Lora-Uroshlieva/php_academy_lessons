@@ -1,0 +1,36 @@
+/*Some fonts, divided by comma - for case when first font will not be work.*/
+p {
+    font-family: Cantarell, Carlito, Jomolhari;
+}
+
+
+/*Service word that will grow up the priority of property if some classes have the same property*/
+.name {
+    color: red ;
+}
+.name2 {
+    color: green !important;
+}
+
+
+/*Will take the neighbour tag p on the same level*/
+div + p {
+    background-color: aquamarine;
+}
+
+
+/*Will take only the first-level nested tag p*/
+div > p {
+    background-color: cadetblue;
+}
+
+
+/*Will take the element that has both classes*/
+.name.name3 {
+    color: darkblue;
+}
+
+/**/
+A[href^="http://"] {
+    font-weight: bold /* Жирное начертание */
+}
