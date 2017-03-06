@@ -28,6 +28,7 @@ div > p {
 /*Will take the element that has both classes*/
 .name.name3 {
     color: darkblue;
+    font-weight: 900;
 }
 
 /**/

@@ -1,0 +1,21 @@
+.container {
+    background-color: antiquewhite;
+    border: 4px solid green;
+    padding: 10px;
+}
+
+.first {
+    float: right;
+    height: 100px;
+    width: 100px;
+    background-color: cornsilk;
+    border: 2px solid red;
+}
+
+.second {
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-color: cornsilk;
+    border: 2px solid red;
+}
