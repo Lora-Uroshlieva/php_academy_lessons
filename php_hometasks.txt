@@ -95,3 +95,64 @@ DONE *** https://github.com/oleg-shumar/php-academy.kiev.ua/tree/master/php_basi
 
 
 
+
+Домашнее задание от 04.03.2017, Преподаватель: Константин Чаус
+
+Что прошли на занятии?
+Массивы – суть, виды декларации.
+Обращение к элементу массива, добавление нового элемента.
+Массивы индексные и ассоциативные. Многомерные массивы.
+Создаем меню для сайта в виде массива.
+Полезные функции:
+Вывод – print_r, var_dump()
+Сортировка массива:sort, ksort…Сравнение функций для сортировки в PHP(http://php.net/manual/ru/array.sorting.php)
+Операции с элементами массива:
+Сериализация, count, array_shift, array_push, array_key_exists, in_array, array_unique, compact…
+Суперглобальные массивы. $GLOBALS, $_ENV, $_SERVER, $_COOKIE, $_SESSION, $_FILES, $_GET, $_POST, $_REQUEST – краткий обзор.
+Циклы:
+- for(block A; block B; block C). Выводим четные числа;
+Вложенные циклы - выводим простые числа;
+While (do-while). Важно! - бесконечный цикл.
+Цикл для работы с массивами – почему foreach а не другие.
+Изменение элементов массива в цикле foreach – почему не сработает
+``foreach ($array as $key=>$value) {
+$value+=1;
+}``
+Управляющие конструкции – break, continue, die, exit.
+Формируем динамическую таблицу умножения.
+Выводим меню из ассоциативного массива в виде списка гиперссылок.
+
+
+
+Что задано домой?
+https://devionity.com/ru/courses/php-fundamentals - п.26-53
+
+
+Пройти тренажер:
+https://www.codecademy.com/learn/php - модули 4-6
+http://php.net/manual/ru/language.types.array.php
+http://php.net/manual/ru/array.sorting.php
+http://php.net/manual/ru/ref.array.php
+http://php.net/manual/ru/language.variables.superglobals.php
+http://php.net/manual/ru/ref.var.php
+http://php.net/manual/ru/function.print-r.php
+http://php.net/manual/ru/function.var-dump.php
+http://php.net/manual/ru/control-structures.while.php
+http://php.net/manual/ru/control-structures.do.while.php
+http://php.net/manual/ru/control-structures.for.php
+http://php.net/manual/ru/control-structures.foreach.php
+http://php.net/manual/ru/control-structures.break.php
+http://php.net/manual/ru/control-structures.continue.php
+
+
+Порешать задачи
+https://github.com/oleg-shumar/php-academy.kiev.ua/tree/master/arrays_loops_tasks
+
+Во вложении презентация и архив с кодом который писали на занятии.
+
+Установить virtualBox https://www.virtualbox.org/
+Установить Vagrant https://www.vagrantup.com/downloads.html
+Установить putty http://www.putty.org/
+Установить multi-putty http://ttyplus.com/multi-tabbed-putty/
+Ознакомится https://ru.wikipedia.org/wiki/Linux
+
