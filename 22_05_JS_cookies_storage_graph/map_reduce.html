@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var arr = [5, 6, 7, 8, 9, 0];
+
+    var a = arr.map(function (item, i) {
+        if(i%2) {
+            return item *10;
+
+        } else {
+            return item - 100;}
+    });
+
+
+    var sum = arr.reduce(function (accumulated, current) {
+        console.log(current, accumulated);
+        accumulated +=current;
+        return accumulated;
+
+    }, 0);
+
+
+
+    var arr2 = ['a', 'b', 'b', 'b', 'c', 'd', 'd', 'f', 'rrr'];
+
+    var count = arr2.reduce(function (acc, cur) {
+//        if (acc[cur]) {
+//            acc[cur]++;
+//        } else acc[cur] = 1;
+        acc[cur] = acc[cur] ? acc[cur]++ : 1;
+
+        return acc;
+    }, {})
+
+
+
+</script>
+
+
+</body>
+</html>
