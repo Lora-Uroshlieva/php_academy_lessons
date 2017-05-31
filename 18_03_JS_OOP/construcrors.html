@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var date = new Date();
+    document.write(date.getFullYear());
+
+
+    var a = new Array();
+    var b = [1, 4, 5, 1, 'ddd'];
+
+    function Point(x, y) {
+        this._x = x;
+        this._y = y;
+    }
+
+    var c = new Point(2, 5);
+    document.write('coordinates of point are: '+c._x + ', ' + c._y);
+
+    function Human(name) {
+        this.name = name;
+        this.sayHello = function () {
+            document.write('<p>Hello, my name is ' + this.name);
+        }
+    }
+
+
+    var gomer = new Human('Gomer');
+    var roky = new Human('Roky');
+    gomer.sayHello();
+    roky.sayHello();
+
+
+    Human.maxAge = 120;
+
+
+</script>
+</body>
+</html>

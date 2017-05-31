@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shapes</title>
+</head>
+<body>
+<script>
+    function Rectangle(w, h) {
+        this.width = w;
+        this.height = h;
+
+//        this.getArea = function () {
+//            return this.width * this.height;
+//        }
+
+
+        // move method getArea  to prototype - this will improve the speed of code.
+        Rectangle.prototype.getArea = function () {
+            return this.width * this.height;
+        }
+    }
+
+
+    var a = new Rectangle(2, 5);
+    document.write('<p> The area is: '+ a.getArea());
+
+
+
+
+
+
+</script>
+</body>
+</html>

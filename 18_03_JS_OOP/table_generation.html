@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border: 5px solid green;
+        }
+        tr:first-child {
+            font-weight: 900;
+        }
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body onload="load()">
+<script>
+    var persons = [
+        {
+            name: 'Olia',
+            secondname: 'Dou',
+            age: 25,
+            occupation: 'developer'
+        },
+        {
+            name: 'Jim',
+            secondname: 'Bush',
+            age: 20,
+            occupation: 'developer'
+        },
+        {
+            name: 'Bill',
+            secondname: 'Dou',
+            age: 28,
+            occupation: 'developer',
+            company: "<img src='tw.png' />"
+        }
+
+    ];
+
+
+    function load() {
+        var container = document.getElementById('table');
+        var table = document.createElement('table');
+        container.appendChild(table);
+
+//        create table header:
+        var row = document.createElement('tr');
+        table.appendChild(row);
+        for(key in persons[2]){
+            var td = document.createElement('td');
+            row.appendChild(td);
+            td.innerHTML = key;
+        }
+
+
+//create table rows and cells using loop:
+         for (var i=0; i<persons.length; i++) {
+             var row = document.createElement('tr');
+             table.appendChild(row);
+             console.log(persons[i]);
+             for(item in persons[i]) {
+                 var data = document.createElement('td');
+                 row.appendChild(data);
+                 data.innerHTML = persons[i][item];
+            }
+         }
+
+    }
+
+
+</script>
+
+<div id="table"></div>
+</body>
+</html>

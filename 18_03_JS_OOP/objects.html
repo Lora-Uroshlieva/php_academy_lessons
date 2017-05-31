@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var obj = new Object();
+    console.log(obj);
+
+    var point = {
+        x: 10,
+        y: 15
+    };
+
+    console.log(point);
+    document.write(point);
+
+    var person = {
+        name: 'Jim',
+        secondname: 'Dou',
+        age: 25,
+        occupation: 'developer',
+        show: function () {
+            document.write('<p>Name: ' + this.name);
+            document.write('<p>Last name: ' + this.secondname);
+            document.write('<p> Position: ' + this.occupation.position);
+            document.write('<p> Company: ' + this.occupation.company);
+        },
+
+        changeWork: function (_company) {
+            this.occupation.company = _company;
+        }
+
+    };
+
+    person.occupation = new Object();
+
+    person.occupation.position = 'dev';
+    person.occupation.company = "<img src='earth.png' />";
+    person.occupation.salary = 2000;
+
+    console.log(person);
+
+    person.show();
+    person.changeWork("<img src='tw.png' />")
+    person.show();
+
+
+
+
+</script>
+</body>
+</html>
