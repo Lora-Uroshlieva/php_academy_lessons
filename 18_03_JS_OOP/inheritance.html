@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inheritance</title>
+</head>
+<body>
+<script>
+    function Human(name) {
+        this.name = name;
+
+        this.talk = function () {
+            document.write('Hello, my name is '+this.name);
+        }
+    }
+
+    function Worker(name) {
+        this.name = name;
+        this.speciality = 'software deweloper';
+    }
+
+
+
+    var human = new Human('John');
+    Worker.prototype = human;
+
+    var mike = new Worker('Mike');
+    mike.talk();
+
+
+</script>
+</body>
+</html>

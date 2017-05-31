@@ -19,14 +19,49 @@
         Rectangle.prototype.getArea = function () {
             return this.width * this.height;
         }
+
+        Rectangle.prototype.name = 'the base rectangle';
+
+        //change method toString
+        Rectangle.prototype.toString = function () {
+            return "<p> This is rectangle " + this.name +
+                " with sides " + this.height + ' and ' + this.width +
+                ' and area: ' + this.getArea()+'</p>';
+        }
+
+        Rectangle.prototype.valueOf = function () {
+            return this.getArea();
+        }
+
+        Rectangle.prototype.equals = function (otherObj) {
+            if(this.getArea() === otherObj.getArea()) {
+                return true;
+            } else return false;
+        }
+
     }
 
 
     var a = new Rectangle(2, 5);
     document.write('<p> The area is: '+ a.getArea());
+    document.write(a.name);
+    a.name = 'my_rect';
+    document.write(a.name);
 
+    a.constructor; //print constructor used for creating current object
 
+    document.write(a);
 
+    var b = new Rectangle(10, 10);
+
+    document.write(a + b);
+
+    document.write(a.hasOwnProperty('aaa'));
+    document.write(b.hasOwnProperty('name'));
+
+    document.write('name' in a);
+
+    document.write('<p>'+a.equals(b));
 
 
 

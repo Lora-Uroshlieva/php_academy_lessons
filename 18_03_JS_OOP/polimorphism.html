@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polimorfism</title>
+</head>
+<body>
+
+<script>
+
+    function Shape(name) {
+        this.name = name;
+        this.getSquare = function(){};
+        this.valueOf = function () {
+            return this.getSquare();
+        };
+    }
+
+    function Circle(radius) {
+        this.radius = radius;
+        this.getSquare = function () {
+            return Math.round(Math.PI*this.radius*this.radius *100)/100;
+        }
+    }
+
+    function Square(side) {
+        this.side = side;
+        this.getSquare = function () {
+            return this.side*this.side;
+        }
+    }
+    
+    function Triangle(base, height) {
+        this.base = base;
+        this.height = height;
+        this.getSquare = function () {
+            return this.base*this.height/2;
+        }
+    }
+    
+    function Rhombus(side, height) {
+        this.side = side;
+        this.height = height;
+        this.getSquare = function () {
+            return this.side*this.height;
+        }
+    }
+
+    var shape = new Shape('name');
+    Circle.prototype = shape;
+    Square.prototype = shape;
+    Triangle.prototype = shape;
+    Rhombus.prototype = shape;
+
+    var c = new Circle(5);
+    var s = new Square(10);
+    var t = new Triangle(4, 8);
+    var r = new Rhombus(6, 3);
+
+
+    document.write(c.getSquare()+'<br>');
+    document.write(s.getSquare()+'<br>');
+    document.write(t.getSquare()+'<br>');
+
+    document.write(c+s+'<br>');
+    document.write(t+r);
+
+
+
+</script>
+</body>
+</html>

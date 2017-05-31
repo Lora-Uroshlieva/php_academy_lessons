@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To string</title>
+</head>
+<body>
+
+<script>
+    var Capsula = function () {
+        var privateMethod = function () {
+            document.write('<p>this is private method');
+        };
+
+        this.publicMethod = function () {
+            document.write('This is open method! <br>');
+            privateMethod();
+        };
+    };
+
+    var obj1 = new Capsula();
+    obj1.publicMethod();
+    obj1.privateMethod();
+
+
+</script>
+</body>
+</html>
