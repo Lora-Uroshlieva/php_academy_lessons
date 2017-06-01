@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    var testObject = {
+        'one': 1,
+        'two': 'aaaaa',
+        'Three': 15,
+        'four': 4444
+    };
+
+    window.localStorage.setItem('testObject', JSON.stringify(testObject));
+    var getObject = window.localStorage.getItem('testObject');
+
+    console.log('Object from storage: ', JSON.parse(getObject));
+
+</script>
+</body>
+</html>
