@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function setCookie() {
+            document.cookie = 'name=Lora; lang=php';
+            console.log(document.cookie);
+        }
+
+        var date = new Date();
+        date.setDate(date.getDate()+1);
+        alert(date.toUTCString());
+
+        var date2 = new Date();
+        date2.setDate(date.getFullYear()+1);
+
+        function getCookie() {
+            alert(document.cookie);
+        }
+
+        function changeCookie() {
+            document.cookie = 'lang=javascript; max-age=20'
+            alert(document.cookie);
+        }
+
+        function deleteCookie() {
+            document.cookie = '';
+        }
+
+    </script>
+</head>
+<body>
+
+<input type="button" value="Set cookie" onclick="setCookie()">
+<input type="button" value="Get cookie" onclick="getCookie()">
+<input type="button" value="Change cookie" onclick="changeCookie()">
+<input type="button" value="Delete cookie" onclick="deleteCookie()">
+
+</body>
+</html>
