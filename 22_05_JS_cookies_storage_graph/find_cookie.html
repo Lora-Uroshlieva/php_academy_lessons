@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+
+        function setCookie() {
+            document.cookie = 'login=Lora111';
+            document.cookie = 'test=1';
+            document.cookie='test2=hello';
+            document.cookie='password=1111111';
+            document.cookie='date=10-01-17';
+        }
+
+        function getCookie() {
+            document.write(findCookieValue("date"));
+        }
+
+
+        function findCookieValue(cookieName) {
+            var allCookies = document.cookie;
+            var index = allCookies.indexOf(cookieName+"=");
+            console.log(index);
+            if (index != -1) {
+                var start = index + cookieName.length + 1;
+                var end = allCookies.indexOf(';', start);
+                if(end == -1) {
+                    end = allCookies.length;
+                }
+                var value = allCookies.substring(start, end);
+                return decodeURIComponent(value);
+            }
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+<input type="button" value="Set cookie" onclick="setCookie()">
+<input type="button" value="Get cookie" onclick="getCookie()">
+
+</body>
+</html>

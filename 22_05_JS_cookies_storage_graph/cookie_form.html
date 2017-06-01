@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.addEventListener("load",  function () {
+            var savedColor = findCookieValue("page-color");
+            document.write(document.coo);
+            if (savedColor) {
+                document.body.style.backgroundColor = savedColor;
+            }
+
+            document.getElementById("saveButton").onclick = function () {
+                var selectedColor = getCheckedRadioId("color");
+                document.cookie =
+                    "page-color="+encodeURIComponent(selectedColor)+
+                    ";max-age="+(60*60);
+                document.body.style.backgroundColor = selectedColor;
+            };
+
+            function getCheckedRadioId(name) {
+                var elements = document.getElementsByName(name);
+
+                for (var i=0, len=elements.length; i < len; ++i) {
+                    if (elements[i].checked) {return elements[i].value;}
+                    Document.write('Found checked!')
+                }
+            }
+
+                function findCookieValue(cookieName) {
+                    var allCookies = document.cookie;
+                    var index = allCookies.indexOf(cookieName+"=");
+                    console.log(index);
+                    if (index != -1) {
+                        var start = index + cookieName.length + 1;
+                        var end = allCookies.indexOf(';', start);
+                        if(end == -1) {
+                            end = allCookies.length;
+                        }
+                        var value = allCookies.substring(start, end);
+                        return decodeURIComponent(value);
+                    }
+
+                }
+
+        }
+        )
+
+
+    </script>
+</head>
+<body>
+
+<input type="radio" name="color" value="green"> Green
+<input type="radio" name="color" value="yellow"> Yellow
+<input type="radio" name="color" value="blue"> Blue
+<input type="button" id="saveButton" value="Submit">
+</body>
+</html>

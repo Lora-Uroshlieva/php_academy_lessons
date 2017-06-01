@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    
+    window.onload = function () {
+        
+        function $(id) {
+            return document.getElementById(id);
+        }
+        
+        $('encodeBtn').onclick = function () {
+            var res = encodeURIComponent($('forEncode').value);
+            $('encodeOutput').innerHTML = res;
+        };
+
+        $('decodeBtn').onclick = function () {
+
+          var result = decodeURIComponent($('forDecoding').value);
+            console.log(result);
+          $('decodeOutput').innerHTML = result;
+        }
+        
+        
+        
+    }
+</script>
+
+Text for encoding:
+<input type="text" id="forEncode">
+<input type="button" id="encodeBtn">
+<p id="encodeOutput"></p>
+<br><br>
+
+Text for decoding:
+<input type="text" id="forDecoding">
+<input type="button" id="decodeBtn">
+<p id="decodeOutput"></p>
+</body>
+</html>
