@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<p>Data will be saved in session storage</p>
+<input type="button" id="btn1" value="Save to storage">
+<input type="button" id="btn2" value="Get from storage">
+<div id="output"></div>
+<script>
+    function init() {
+        var output = document.getElementById('output');
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+
+        btn1.onclick = function () {
+            window.sessionStorage.setItem('key1', 'first');
+            window.sessionStorage.key2 = 'second';
+            window.sessionStorage['key3'] = 'third';
+        };
+
+        btn2.onclick = function () {
+            output.innerHTML = window.sessionStorage.getItem('key1') + "<br>";
+            output.innerHTML += window.sessionStorage.key2 + "<br>";
+            output.innerHTML += window.sessionStorage['key3'] + "<br>";
+        };
+    }
+
+    window.addEventListener('load', init, false);
+</script>
+</body>
+</html>

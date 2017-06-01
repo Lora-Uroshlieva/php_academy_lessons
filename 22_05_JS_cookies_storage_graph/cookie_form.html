@@ -6,7 +6,6 @@
     <script>
         window.addEventListener("load",  function () {
             var savedColor = findCookieValue("page-color");
-            document.write(document.coo);
             if (savedColor) {
                 document.body.style.backgroundColor = savedColor;
             }
@@ -24,7 +23,6 @@
 
                 for (var i=0, len=elements.length; i < len; ++i) {
                     if (elements[i].checked) {return elements[i].value;}
-                    Document.write('Found checked!')
                 }
             }
 
@@ -51,10 +49,12 @@
     </script>
 </head>
 <body>
+<form action="">
+    <input type="radio" name="color" value="#ffd800"> Orange.
+    <input type="radio" name="color" value="#5ade54"> Green.
+    <input type="button" id="saveButton" value="Save">
 
-<input type="radio" name="color" value="green"> Green
-<input type="radio" name="color" value="yellow"> Yellow
-<input type="radio" name="color" value="blue"> Blue
-<input type="button" id="saveButton" value="Submit">
+</form>
+
 </body>
 </html>

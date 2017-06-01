@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        window.addEventListener('load', function () {
+            if (window.localStorage.pageColor) {
+                document.body.style.backgroundColor = window.localStorage.pageColor;
+            }
+
+            document.getElementById('saveButton').onclick = function () {
+                var selectedColor = getCheckedRadioId('color');
+                window.localStorage.pageColor = selectedColor;
+                document.body.style.backgroundColor = selectedColor;
+            };
+
+            function getCheckedRadioId(name) {
+                var elements = document.getElementsByName(name);
+
+                for (var i=0; i<elements.length; ++i) {
+                    if (elements[i].checked) {
+                        return elements[i].value;
+                    }
+                }
+            }
+
+
+
+        })
+
+    </script>
+</head>
+<body>
+<form action="">
+    <input type="radio" name="color" value="#ffd800"> Orange.
+    <input type="radio" name="color" value="#5ade54"> Green.
+    <input type="radio" name="color" value="blue"> Blue.
+    <input type="radio" name="color" value="pink"> Pink.
+    <input type="button" id="saveButton" value="Save">
+
+</form>
+
+
+</body>
+</html>
