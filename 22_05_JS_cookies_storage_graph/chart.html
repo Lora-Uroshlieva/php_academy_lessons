@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="chartContainer"></div>
+
+
+<script>
+
+
+
+
+
+
+    window.addEventListener("load", function () {
+        var chart = createBarChart([200, 100, 45, 23, 87, 100, 45, 22, 33, 84], 1000, 400, "red");
+
+        var container = document.getElementById('chartContainer');
+        container.appendChild(chart);
+    })
+</script>
+</body>
+</html>

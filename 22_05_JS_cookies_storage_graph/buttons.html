@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="imgButton" src="13.jpg" alt="Button">
+<button id="changeBtn">Change</button>
+
+
+<script>
+    window.addEventListener('load', function () {
+        var flag;
+        document.getElementById('changeBtn').addEventListener('click', function () {
+            if (flag) {
+                document.getElementById('imgBtn').src="13.jpg";
+            } else {document.getElementById('imgBtn').src= "3.png"}
+            flag = !flag;
+        });
+
+    });
+
+
+
+</script>
+</body>
+</html>
